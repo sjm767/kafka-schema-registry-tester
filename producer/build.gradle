@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.ebaykorea'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.6.2'
+
+    implementation project(':model')
+}
+
+test {
+    useJUnitPlatform()
+}

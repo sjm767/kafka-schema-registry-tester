@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'com.ebaykorea'
+version '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'net.sourceforge.argparse4j', name: 'argparse4j', version: '0.7.0'
+
+    // https://mvnrepository.com/artifact/org.apache.kafka/kafka-log4j-appender
+    implementation group: 'org.apache.kafka', name: 'kafka-log4j-appender', version: '3.0.0'
+    implementation project(':model')
+
+
+}
+
+test {
+    useJUnitPlatform()
+}

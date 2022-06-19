@@ -1,0 +1,23 @@
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: satbroker-02-kafka-dev-staturn:9092,satbroker-03-kafka-dev-staturn:9092
+      acks: all
+      retries: 3
+      max.in.flight.requests.per.connection: 1
+      enable.idempotence: true
+      properties:
+        schema:
+          registry:
+            url: http://172.30.1.4:8081 #schema-registry url
+        auto.register.schemas: false
+        use.latest.version: false
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+logging:
+  level:
+    root: INFO
+    org.apache.kafka: WARN
+
+
+

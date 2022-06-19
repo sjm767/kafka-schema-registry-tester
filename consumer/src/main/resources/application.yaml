@@ -1,0 +1,21 @@
+spring:
+  kafka:
+    bootstrap-servers: satbroker-02-kafka-dev-staturn:9092,satbroker-03-kafka-dev-staturn:9092
+    consumer:
+      group-id: 20220110-group-s1
+      auto-offset-reset: latest
+      client-id: jaeshim-schema-registry-teser
+      keyDeserializer: org.apache.kafka.common.serialization.StringDeserializer
+      valueDeserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      properties:
+        schema.registry.url: http://172.30.1.4:8081 #schema-registry url
+        auto.register.schemas: false
+        use.latest.version: true
+        specific.avro.reader: true
+logging:
+  level:
+    root: INFO
+    org.apache.kafka: WARN
+
+
+

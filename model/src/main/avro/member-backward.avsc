@@ -1,0 +1,14 @@
+{
+  "fields": [
+    {
+      "name": "name",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    }
+  ],
+  "name": "MemberBackward",
+  "namespace": "com.ebaykorea.schema.registry.tester.producer.avro",
+  "type": "record"
+}

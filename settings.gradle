@@ -1,0 +1,6 @@
+rootProject.name = 'tester'
+include 'producer'
+include 'consumer'
+include 'model'
+include 'producer-performance'
+

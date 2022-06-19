@@ -1,0 +1,18 @@
+plugins {
+  id 'java'
+}
+
+bootJar {
+  enabled = false
+}
+jar {
+  enabled = true
+}
+//apply plugin: "com.commercehub.gradle.plugin.avro"
+//dependencies {
+//     implementation group: "org.apache.avro", name: "avro", version: "1.11.0"
+//}
+
+avro {
+		fieldVisibility = "PRIVATE"
+}
